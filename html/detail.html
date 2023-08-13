@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Head content -->
+  </head>
+  <body>
+    <div id="detailContainer">
+      <!-- Display detailed anime information here -->
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const storedAnime = localStorage.getItem("selectedAnime");
+
+        if (storedAnime) {
+          try {
+            const selectedAnime = JSON.parse(storedAnime);
+
+            // Use selectedAnime for further processing
+            const detailContainer = document.getElementById("detailContainer");
+            // Create a template for displaying the anime information
+            const template = `
+            <h2>${selectedAnime.Name}</h2>
+            <img src="${selectedAnime["Image URL"]}" alt="${selectedAnime.Name} Image">
+            <p><strong>Genres:</strong> ${selectedAnime.Genres}</p>
+            <p><strong>Synopsis:</strong> ${selectedAnime.Synopsis}</p>
+            <!-- Add more information fields as needed -->
+          `;
+
+            // Populate the detailContainer with the template
+            detailContainer.innerHTML = template;
+          } catch (error) {
+            console.error("Error parsing stored anime:", error);
+          }
+        } else {
+          console.error("Stored anime is undefined or not found.");
+        }
+      });
+    </script>
+  </body>
+</html>

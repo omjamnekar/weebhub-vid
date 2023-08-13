@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weebhub-vid</title>
+    <link rel="stylesheet" href="../css/style.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;0,800;1,800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/search.css">
+  </head>
+  <header>
+    <div class="header-section">
+      <div class="logo-container">
+        <div class="logo">
+          <img src="../img/logo/1.png" alt="weebhub-anime-logo" />
+        </div>
+        <h4>home</h4>
+        <h4>anime</h4>
+        <h4>more</h4>
+        <i class="bx bx-menu"></i>
+      </div>
+
+      <div class="icons-search">
+        <div class="search-box expandable-input">
+          <div class="row">
+            <input
+              type="text"
+              id="searchInput"
+              class="check"
+              placeholder="Search anime"
+            />
+            <button class="bx-button"><i class="bx bx-search"></i></button>
+          </div>
+          <div id="results" class="result-box"></div>
+          <div class="btn-search-con-s ">
+            <aside class="aside-div">
+
+              <button
+              id="showMore"
+              class="more-option-search"
+              style="display: none"
+              >
+              see more
+            </button>
+            <button
+            id="seePrevious"
+            class="more-option-search"
+            style="display: none"
+            >
+            Show Previous
+          </button>
+        </aside>
+        </div>
+        </div>
+      </div>
+
+
+
+
+    </div>
+  </header>
+  <body>
+    <section class="hero-section">
+      <div class="middle-container">
+        <div class="main-img-container">
+          <img class="photo-main" alt="" />
+        </div>
+        <div class="overlap-container">
+         
+          </div> 
+        </div>
+      </div>
+    </section>
+    <section class="first-container">
+      <div class="first-wrapper">
+
+   
+       <div class="listofcontainer-pack active">
+          <div class="listofcontainer-1">
+            <div class="list-item-c"></div>
+            <div class="list-item-c"></div>
+            <div class="list-item-c"></div>
+            <div class="list-item-c"></div>
+          </div>
+          <div class="listofcontainer-1">
+        <div class="list-item-c"></div>
+        <div class="list-item-c"></div>
+        <div class="list-item-c"></div>
+        <div class="list-item-c"></div>
+          </div>
+       </div>
+       <div class="listofcontainer-pack">
+        <div class="listofcontainer-1">
+          <div class="list-item-c"></div>
+            <div class="list-item-c"></div>
+          <div class="list-item-c"></div>
+          <div class="list-item-c"></div>
+        </div>
+        <div class="listofcontainer-1">
+          <div class="list-item-c"></div>
+          <div class="list-item-c"></div>
+          <div class="list-item-c"></div>
+          <div class="list-item-c"></div>
+        </div>
+       </div>
+       <div class="listofcontainer-pack">
+        <div class="listofcontainer-1">
+          <div class="list-item-c"></div>
+            <div class="list-item-c"></div>
+          <div class="list-item-c"></div>
+          <div class="list-item-c"></div>
+        </div>
+        <div class="listofcontainer-1">
+          <div class="list-item-c"></div>
+          <div class="list-item-c"></div>
+          <div class="list-item-c"></div>
+          <div class="list-item-c"></div>
+        </div>
+       </div>
+       <div class="listofcontainer-pack">
+        <div class="listofcontainer-1">
+          <div class="list-item-c"></div>
+            <div class="list-item-c"></div>
+          <div class="list-item-c"></div>
+          <div class="list-item-c"></div>
+        </div>
+        <div class="listofcontainer-1">
+          <div class="list-item-c"></div>
+          <div class="list-item-c"></div>
+          <div class="list-item-c"></div>
+          <div class="list-item-c"></div>
+        </div>
+       </div>
+       <div class="listofcontainer-pack">
+        <div class="listofcontainer-1">
+          <div class="list-item-c"></div>
+            <div class="list-item-c"></div>
+          <div class="list-item-c"></div>
+          <div class="list-item-c"></div>
+        </div>
+        <div class="listofcontainer-1">
+          <div class="list-item-c"></div>
+          <div class="list-item-c"></div>
+          <div class="list-item-c"></div>
+          <div class="list-item-c"></div>
+        </div>
+       </div>
+      
+       
+      
+    </section>
+    <div class="aside-block">
+      <div class="list-scroll-container">
+        <i class="bx bx-chevron-left" id="leftArrow"></i>
+        <div class="list-of-scroll">
+          <div class="ww active">
+            <p class="p-number">1</p>
+          </div>
+          <div class="ww">
+            <p class="p-number">2</p>
+          </div>
+          <div class="ww">
+            <p class="p-number">3</p>
+          </div>
+          <div class="ww">
+            <p class="p-number">4</p>
+          </div>
+          <div class="ww">
+            <p class="p-number">5</p>
+          </div>
+          
+        </div>
+        <i class="bx bx-chevron-right" id="rightArrow"></i>
+      </div>
+    </div>
+    <section class="second-container">
+      <div class="containers-list">
+        <h2>Trending Animes</h2>
+        <div class="cards-list">
+          <aside
+            class="cards-former re active"
+            onmouseover="increaseSize(this)"
+            onmouseout="resetSize(this)"
+          >
+            <img src="../img/ichigo_kurosaki.jpg" alt="bleach" />
+            <h3>Bleach</h3>
+          </aside>
+          <aside
+            class="cards-former"
+            onmouseover="increaseSize(this)"
+            onmouseout="resetSize(this)"
+          >
+            <img src="../img/attack-on-titan.jpg" alt="bleach" />
+            <h3>Attack On Titan</h3>
+          </aside>
+          <aside
+            class="cards-former"
+            onmouseover="increaseSize(this)"
+            onmouseout="resetSize(this)"
+          >
+            <img src="../img/onepiece.jpg" alt="bleach" />
+
+            <h3>One Piece</h3>
+          </aside>
+          <aside
+            class="cards-former"
+            onmouseover="increaseSize(this)"
+            onmouseout="resetSize(this)"
+          >
+            <img src="../img/onepunch.jpg" alt="bleach" />
+            <h3>One Punch</h3>
+          </aside>
+          <aside
+            class="cards-former"
+            onmouseover="increaseSize(this)"
+            onmouseout="resetSize(this)"
+          >
+            <img src="../img/tokyog2.png" alt="bleach" />
+
+            <h3>Tokyo Ghoul</h3>
+          </aside>
+          <aside
+            class="cards-former"
+            onmouseover="increaseSize(this)"
+            onmouseout="resetSize(this)"
+          >
+            <img src="../img/myhero.jpg" alt="bleach" />
+            <h3>My Hero Academia</h3>
+          </aside>
+          <aside
+            class="cards-former"
+            onmouseover="increaseSize1(this)"
+            onmouseout="resetSize1(this)"
+          >
+            <img src="../img/other-img.png" alt="bleach" />
+            <h3>other animes</h3>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="third-container">
+      <div class="cards-container-anime">
+        <div class="header-of-cards-gen">
+          <h2 class="recent-up">Recent Updates</h2>
+          <div class="btn-container-ani">
+            <aside class="ww1 active">
+              <button class="btn-ani all">All</button>
+            </aside>
+            <aside class="ww1">
+              <button class="btn-ani sub">Sub</button>
+            </aside>
+            <aside class="ww1">
+              <button class="btn-ani dub">Dub</button>
+            </aside>
+          </div>
+        </div>
+
+        <figure class="figure-new-gen">
+          <div class="card-list-con active">
+            <div class="card-list">
+            <div class="card-let-dy"></div>
+            <div class="card-let-dy"></div>
+            <div class="card-let-dy"></div>
+            <div class="card-let-dy"></div>
+            <div class="card-let-dy"></div>
+            <div class="card-let-dy"></div>
+            <div class="card-let-dy"></div>
+            <div class="card-let-dy"></div>
+            <div class="card-let-dy"></div>
+            <div class="card-let-dy"></div>
+            <div class="card-let-dy"></div>
+            <div class="card-let-dy"></div>
+            <div class="card-let-dy"></div>
+            </div>
+          </div>
+          <div class="card-list-con">
+          <div class="card-list">
+            <div class="card-let-dy-1"></div>
+            <div class="card-let-dy-1"></div>
+            <div class="card-let-dy-1"></div>
+            <div class="card-let-dy-1"></div>
+            <div class="card-let-dy-1"></div>
+            <div class="card-let-dy-1"></div>
+            <div class="card-let-dy-1"></div>
+            <div class="card-let-dy-1"></div>
+            <div class="card-let-dy-1"></div>
+            <div class="card-let-dy-1"></div>
+            <div class="card-let-dy-1"></div>
+            <div class="card-let-dy-1"></div>
+            <div class="card-let-dy-1"></div>
+          </div>
+          </div>
+          <div class="card-list-con">
+          <div class="card-list">
+            <div class="card-let-dy-2"></div>
+            <div class="card-let-dy-2"></div>
+            <div class="card-let-dy-2"></div>
+            <div class="card-let-dy-2"></div>
+            <div class="card-let-dy-2"></div>
+            <div class="card-let-dy-2"></div>
+            <div class="card-let-dy-2"></div>
+            <div class="card-let-dy-2"></div>
+            <div class="card-let-dy-2"></div>
+            <div class="card-let-dy-2"></div>
+            <div class="card-let-dy-2"></div>
+            <div class="card-let-dy-2"></div>
+            <div class="card-let-dy-2"></div>
+          </div>
+          </div>
+          <div>
+            <h2 class="con-era-gen-text">Genres</h2>
+            <div class="card-genera-container">
+              <div class="button-container"></div>
+
+              <button class="gen-era btn-seeless-gen">see less</button>
+              <button class="gen-era btn-seemore-gen">see more</button>
+            </div>
+            <div class="most-views-container">
+              <div class="btb-be">
+                <h2 class="con-era-gen-text t1">Most Views</h2>
+                <aside class="">
+                  <div class="btn-vies active">
+                    <button class="btn-mos-vie">Day</button>
+                  </div>
+                  <div class="btn-vies">
+                    <button class="btn-mos-vie">week</button>
+                  </div>
+                  <div class="btn-vies">
+                    <button class="btn-mos-vie">Month</button>
+                  </div>
+                </aside>
+              </div>
+              <figure>
+                <section class="most-list">
+                  <aside class="most-list-con-1 active ">
+                    <div class="most-view-card"></div>
+                    <div class="most-view-card"></div>
+                    <div class="most-view-card"></div>
+                    <div class="most-view-card"></div>
+                    <div class="most-view-card"></div>
+                    <div class="most-view-card"></div>
+                    <div class="most-view-card"></div>
+                    <div class="most-view-card"></div>
+                    <div class="most-view-card"></div>
+                    <div class="most-view-card"></div>
+
+                  </aside>
+                  <aside class="most-list-con-1">
+                    
+                  </aside>
+                </section>
+              </figure>
+            </div>
+          </div>
+        </figure>
+      </div>
+    </section>
+
+    <section>
+     
+    </section>
+  </body>
+  <script src="../js/script.js" type="module"></script>
+  <script>
+    function increaseSize(element) {
+  element.classList.add("active");
+  // re.classList.remove("active");
+}
+
+function resetSize(element) {
+  element.classList.remove("active");
+  // re.classList.add("active");
+}
+
+function increaseSize1(element) {
+  element.classList.add("active");
+}
+
+function resetSize1(element) {
+  element.classList.remove("active");
+}
+
+function resetSizesearch(element){
+  element.classList.remove(".expanded");
+}
+  </script>
+  <script src="../js/search.js"></script>
+</html>
