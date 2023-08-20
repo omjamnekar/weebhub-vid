@@ -744,3 +744,229 @@ export const photoUrls = [
   "../img/mob.jpg",
   // Add more photo URLs as needed
 ];
+
+export var mostview = [
+  {
+    id: "01",
+    imagePath: "../img/cards/MushokuTensei.jpg",
+    title: "MushokuTensei",
+    views: "272k",
+    likesCount: "15k",
+  },
+  {
+    id: "02",
+    imagePath: "../img/cards/demonslayer.jpg",
+    title: "Demon Slayer",
+    views: "233k",
+    likesCount: "10k",
+  },
+
+  {
+    id: "03",
+    imagePath: "../img/cards/Free.jpg",
+    title: "Free!",
+    views: "32k",
+    likesCount: "12k",
+  },
+  {
+    id: "04",
+    imagePath: "../img/cards/amiactuallytheStrongest.jpg",
+    title: "Am I Actually the Strongest?",
+    views: "272k",
+    likesCount: "15k",
+  },
+  {
+    id: "05",
+    imagePath: "../img/cards/steinsgate.jpg",
+    title: "Steins Gate",
+    views: "234k",
+    likesCount: "5k",
+  },
+  {
+    id: "06",
+    imagePath: "../img/cards/onepiece.jpg",
+    title: "One Piece",
+    views: "272k",
+    likesCount: "15k",
+  },
+  {
+    id: "07",
+    imagePath: "../img/cards/parasyte.jpg",
+    title: "Parasyte",
+    views: "272k",
+    likesCount: "15k",
+  },
+  {
+    id: "08",
+    imagePath: "../img/cards/naruto.jpg",
+    title: "Naruto",
+    views: "245k",
+    likesCount: "45k",
+  },
+
+  {
+    id: "09",
+    imagePath: "../img/cards/classrooma.jpg",
+    title: "Classroom Asassian",
+    views: "12k",
+    likesCount: "8k",
+  },
+
+  {
+    id: "10",
+    imagePath: "../img/cards/attackontitan.jpg",
+    title: "Attack on titan",
+    views: "272k",
+    likesCount: "15k",
+  },
+];
+
+export var mostvieww = [
+  {
+    id: "01",
+    imagePath: "../img/cards/amiactuallytheStrongest.jpg",
+    title: "Am I Actually the Strongest?",
+    views: "272k",
+    likesCount: "15k",
+  },
+  {
+    id: "02",
+    imagePath: "../img/cards/steinsgate.jpg",
+    title: "Steins Gate",
+    views: "234k",
+    likesCount: "5k",
+  },
+  {
+    id: "03",
+    imagePath: "../img/cards/naruto.jpg",
+    title: "Naruto",
+    views: "245k",
+    likesCount: "45k",
+  },
+  {
+    id: "04",
+    imagePath: "../img/cards/demonslayer.jpg",
+    title: "Demon Slayer",
+    views: "233k",
+    likesCount: "10k",
+  },
+
+  {
+    id: "05",
+    imagePath: "../img/cards/Free.jpg",
+    title: "Free!",
+    views: "32k",
+    likesCount: "12k",
+  },
+  {
+    id: "06",
+    imagePath: "../img/cards/classrooma.jpg",
+    title: "Classroom Asassian",
+    views: "12k",
+    likesCount: "8k",
+  },
+
+  {
+    id: "07",
+    imagePath: "../img/cards/onepiece.jpg",
+    title: "One Piece",
+    views: "272k",
+    likesCount: "15k",
+  },
+  {
+    id: "08",
+    imagePath: "../img/cards/parasyte.jpg",
+    title: "Parasyte",
+    views: "272k",
+    likesCount: "15k",
+  },
+  {
+    id: "09",
+    imagePath: "../img/cards/attackontitan.jpg",
+    title: "Attack on titan",
+    views: "272k",
+    likesCount: "15k",
+  },
+  {
+    id: "10",
+    imagePath: "../img/cards/MushokuTensei.jpg",
+    title: "MushokuTensei",
+    views: "272k",
+    likesCount: "15k",
+  },
+];
+
+export var mostviewy = [
+  {
+    id: "01",
+    imagePath: "../img/cards/amiactuallytheStrongest.jpg",
+    title: "Am I Actually the Strongest?",
+    views: "272k",
+    likesCount: "15k",
+  },
+  {
+    id: "02",
+    imagePath: "../img/cards/steinsgate.jpg",
+    title: "Steins Gate",
+    views: "234k",
+    likesCount: "5k",
+  },
+  {
+    id: "03",
+    imagePath: "../img/cards/naruto.jpg",
+    title: "Naruto",
+    views: "245k",
+    likesCount: "45k",
+  },
+  {
+    id: "04",
+    imagePath: "../img/cards/demonslayer.jpg",
+    title: "Demon Slayer",
+    views: "233k",
+    likesCount: "10k",
+  },
+
+  {
+    id: "05",
+    imagePath: "../img/cards/Free.jpg",
+    title: "Free!",
+    views: "32k",
+    likesCount: "12k",
+  },
+  {
+    id: "06",
+    imagePath: "../img/cards/classrooma.jpg",
+    title: "Classroom Asassian",
+    views: "12k",
+    likesCount: "8k",
+  },
+
+  {
+    id: "07",
+    imagePath: "../img/cards/onepiece.jpg",
+    title: "One Piece",
+    views: "272k",
+    likesCount: "15k",
+  },
+  {
+    id: "08",
+    imagePath: "../img/cards/parasyte.jpg",
+    title: "Parasyte",
+    views: "272k",
+    likesCount: "15k",
+  },
+  {
+    id: "09",
+    imagePath: "../img/cards/attackontitan.jpg",
+    title: "Attack on titan",
+    views: "272k",
+    likesCount: "15k",
+  },
+  {
+    id: "10",
+    imagePath: "../img/cards/MushokuTensei.jpg",
+    title: "MushokuTensei",
+    views: "272k",
+    likesCount: "15k",
+  },
+];
