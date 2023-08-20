@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>History</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;0,800;1,800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/history.css" />
+    <link rel="stylesheet" href="../css/account.css" />
+    <link rel="stylesheet" href="../css/search.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="icon" type="image/x-icon" href="../img/icon-logo.png" />
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts@3.27.2/dist/apexcharts.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+  </head>
+  <body>
+    <header class="header-1 ert">
+      <div class="header-section">
+        <div class="logo-container">
+          <div class="logo">
+            <img src="../img/logo/1.png" alt="weebhub-anime-logo" />
+          </div>
+          <h4><a href="front.html">Home</a></h4>
+          <h4><a href="index.html">Anime</a></h4>
+          <h4>More</h4>
+          <i class="bx bx-menu"></i>
+          <div class="active-phase">
+            <aside class="avote-sec">
+              <p>
+                <a href="account.html"
+                  ><i class="bx bx-game"></i><span>account Manege</span></a
+                >
+              </p>
+              <p>
+                <a href="history.html"
+                  ><i class="bx bx-history"></i><span>History</span></a
+                >
+              </p>
+              <p>
+                <a href=""
+                  ><i class="bx bxs-bar-chart-alt-2"></i><span> Binges</span></a
+                >
+              </p>
+              <p>
+                <a href=""><i class="bx bx-pencil"></i><span>about</span></a>
+              </p>
+            </aside>
+          </div>
+        </div>
+
+        <div class="icons-search">
+          <div class="search-box expandable-input">
+            <div class="row">
+              <input
+                type="text"
+                id="searchInput"
+                class="check"
+                placeholder="Search anime"
+              />
+              <button class="bx-button"><i class="bx bx-search"></i></button>
+            </div>
+            <div id="results" class="result-box"></div>
+            <div class="btn-search-con-s">
+              <aside class="aside-div">
+                <button
+                  id="showMore"
+                  class="more-option-search"
+                  style="display: none"
+                >
+                  see more
+                </button>
+                <button
+                  id="seePrevious"
+                  class="more-option-search"
+                  style="display: none"
+                >
+                  Show Previous
+                </button>
+              </aside>
+            </div>
+          </div>
+          <a href="account.html"
+            ><div class="section-header-acc-icon" href="account.html">
+              <div class="account-small-icon">
+                <h2 class="user-name">Om jamnekar</h2>
+                <p class="user-id">omjamnekar877@gmail.com</p>
+              </div>
+              <img src="https://images5.alphacoders.com/121/1217703.png" /></div
+          ></a>
+        </div>
+      </div>
+    </header>
+    <div class="history-list-con">
+      <aside class="c7">
+        <!-- <div class="slide-card-his">
+          <div class="img0e">
+            <img src="../img/backzoro.png" alt="" />
+          </div>
+          <div class="his-text">
+            <h2>OnePiece</h2>
+            <p>
+              A high school student named Light Turner discovers a mysterious
+              notebook that has the power to kill anyone whose name is written
+              within its pages, and launches a secret crusade to rid the world
+              of criminals.
+            </p>
+            <div class="aside-items">
+              <p>starRate: 8.7</p>
+              <p>episodeCount: 3</p>
+
+              <p>releaseDate:jul 16,2023</p>
+            </div>
+            <p>status:Currentyl-Airing</p>
+            <p>
+              genres: Action, Adventure, Comedy, Drama, Fantasy, Shounen, Super
+              Power
+            </p>
+          </div>
+          <div class="watch-btn-his">
+            <button>Watch frome you left</button>
+
+            <details class="custom-select">
+              <summary class="radios">
+                <input
+                  type="radio"
+                  name="item"
+                  id="default"
+                  title="Remaining Episodes"
+                  checked
+                />
+                <input type="radio" name="item" id="item1" title="Item 1" />
+                <input type="radio" name="item" id="item2" title="Item 2" />
+                <input type="radio" name="item" id="item3" title="Item 3" />
+                <input type="radio" name="item" id="item4" title="Item 4" />
+                <input type="radio" name="item" id="item5" title="Item 5" />
+              </summary>
+              <ul class="list">
+                <li>
+                  <label for="item1">
+                    0Episode
+                    <span></span>
+                  </label>
+                </li>
+                <li>
+                  <label for="item2">1Episode</label>
+                </li>
+                <li>
+                  <label for="item3">2Episode</label>
+                </li>
+                <li>
+                  <label for="item4">3Episode</label>
+                </li>
+                <li>
+                  <label for="item5">4Episode</label>
+                </li>
+                <li>
+                  <label for="item5">5Episode</label>
+                </li>
+                <li>
+                  <label for="item5">6Episode</label>
+                </li>
+                <li>
+                  <label for="item5">7Episode</label>
+                </li>
+              </ul>
+            </details>
+          </div>
+        </div> -->
+        <h2 class="reer">History</h2>
+        <div id="your-container"></div>
+      </aside>
+    </div>
+  </body>
+  <script src="../js/history.js" type="module"></script>
+</html>

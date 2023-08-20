@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anime Search by Genre</title>
+  </head>
+  <body>
+    <h1>Anime Search by Genre</h1>
+    <div class="button-container">
+      <!-- Buttons for each genre -->
+    </div>
+  </body>
+  <script>
+    window.addEventListener("DOMContentLoaded", function () {
+      var genres = [
+        "Action",
+        "Adventure",
+        "Avant Garde",
+        "Boys Love",
+        "Comedy",
+        "Demons",
+        "Drama",
+        "Hentai",
+        "Horror",
+        "Avant Garde",
+        "Girls Love",
+        "Ecchi",
+        "Suspense",
+        "Ecchi",
+        "Fantasy",
+        "Girls Love",
+        "Gourmet",
+        "Harem",
+        "Horror",
+        "Isekai",
+        "Iyashikei",
+        "Josei",
+        "Kids",
+        "Magic",
+        "Mahou Shoujo",
+        "Martial Arts",
+        "Mecha",
+        "Military",
+        "Music",
+        "Mystery",
+        "Parody",
+        "Psychological",
+        "Reverse Harem",
+        "Romance",
+        "School",
+        "Sci-Fi",
+        "Seinen",
+        "Shoujo",
+        "Shounen",
+        "Slice of Life",
+        "Space",
+        "Sports",
+        "Super Power",
+        "Supernatural",
+        "Suspense",
+        "Thriller",
+        "Vampire",
+        // Add other genres here
+      ];
+
+      var buttonContainer = document.querySelector(".button-container");
+      genres.forEach(function (genre) {
+        var genreButton = document.createElement("button");
+        genreButton.textContent = genre;
+        genreButton.addEventListener("click", function () {
+          window.location.href =
+            "genre.html?genre=" + encodeURIComponent(genre);
+        });
+        buttonContainer.appendChild(genreButton);
+      });
+    });
+  </script>
+</html>

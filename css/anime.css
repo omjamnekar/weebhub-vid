@@ -1,0 +1,130 @@
+
+.hero-section-anime{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.grid-2{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 2rem;
+}
+
+.section-container-w{
+    height: 25rem;
+    border-radius: 2rem;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    object-fit: cover;
+    cursor: pointer;
+    
+}
+
+
+.section-container-w::before{
+    content: "";
+    background-color: #0000009d;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 3;
+}
+.section-container-w img{
+    width: 100%;
+    z-index: 2;
+    height: 100%;
+    position: absolute;
+   object-fit: cover;
+   
+    
+}
+.section-container-w::before:hover  {
+    background-color: #000000d0;
+    
+}
+
+.section-container-w h2{
+    font-size: 5rem;
+    font-weight: 900;
+    padding: 2rem;
+
+  
+    position: relative;
+    z-index: 5;
+    height: 100%;
+    background: linear-gradient(23deg, #000000a6,#00000000);
+}
+.s{  color:rgb(240, 145, 21) ;
+
+}
+.t{
+    color:rgb(0, 87, 145) ;
+}
+.f{
+    color:rgb(250, 92, 255) ;
+}
+.si{
+    color:rgb(255, 37, 103) ;
+}
+
+.des{
+    width: 90%;
+    margin: 0 auto;
+    padding: 4rem 2rem ;
+    display: flex;
+
+}
+
+.hero-heading{
+    
+    font-weight: 800;
+width: 40%;
+line-height: 1;
+color:rgb(240, 145, 21) ;
+    font-size: 4rem;
+}
+
+.ret{
+        background:linear-gradient(30deg,rgba(127, 255, 212, 0.384),rgba(2, 104, 70, 0.651)),url("../img/cards/beyblademetal.jpeg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    border-radius: 2rem;
+    padding: 2rem;
+      width: 60%;
+      display: flex;
+      flex-direction: column;
+}
+.ret h2{
+    font-size: 3rem;
+    color: aliceblue;
+    background-color: rgba(80, 255, 255, 0.075);
+
+    font-weight: 800;
+}
+.ret button{
+    text-align: end;
+    width: 20rem;
+    display: flex;
+    color: rgb(255, 253, 253);
+    font-weight: 700;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(1, 158, 158);
+    padding: 1rem 3rem;
+  
+    align-self: self-end;
+    border-radius: 1.3rem;
+    font-size: 1.4rem;
+}
+
+.wd{
+    margin-top: 23rem;
+}
+
+.section-header-acc-icon{
+    
+}

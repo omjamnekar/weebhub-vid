@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anime Search by Genre</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;0,800;1,800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/x-icon" href="../img/icon-logo.png" />
+    <link rel="stylesheet" href="../css/genre.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+
+  <body>
+    <h1>Anime Search by Genre</h1>
+    <div class="section-of-btn-img">
+      <div class="aside-conw">
+        <h2>Genre</h2>
+        <div class="button-container">
+          <!-- Buttons for each genre -->
+        </div>
+      </div>
+      <div class="src-img-container">
+        <img src="" alt="" class="actual-img" id="slideshow-image" />
+      </div>
+    </div>
+    <h1 id="genre-header"><span class="decoi"></span></h1>
+    <div class="container-result-cards">
+      <div id="results">
+        <!-- Display search results here -->
+      </div>
+    </div>
+  </body>
+</html>
+<script src="../js/search.js"></script>
+<script>
+  window.addEventListener("DOMContentLoaded", function () {
+    var genres = [
+      "Action",
+      "Adventure",
+      "Avant Garde",
+      "Boys Love",
+      "Comedy",
+      "Demons",
+      "Drama",
+      "Hentai",
+      "Horror",
+      "Avant Garde",
+      "Girls Love",
+      "Ecchi",
+      "Suspense",
+      "Ecchi",
+      "Fantasy",
+      "Girls Love",
+      "Gourmet",
+      "Harem",
+      "Horror",
+      "Isekai",
+      "Iyashikei",
+      "Josei",
+      "Kids",
+      "Magic",
+      "Mahou Shoujo",
+      "Martial Arts",
+      "Mecha",
+      "Military",
+      "Music",
+      "Mystery",
+      "Parody",
+      "Psychological",
+      "Reverse Harem",
+      "Romance",
+      "School",
+      "Sci-Fi",
+      "Seinen",
+      "Shoujo",
+      "Shounen",
+      "Slice of Life",
+      "Space",
+      "Sports",
+      "Super Power",
+      "Supernatural",
+      "Suspense",
+      "Thriller",
+      "Vampire",
+      "gore",
+      // Add other genres here
+    ];
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const selectedGenre = urlParams.get("genre");
+
+    if (selectedGenre) {
+      // Fetch and display records based on the selected genre
+      searchByGenre(selectedGenre);
+    }
+
+    var buttonContainer = document.querySelector(".button-container");
+    genres.forEach(function (genre) {
+      var genreButton = document.createElement("button");
+      genreButton.textContent = genre;
+      genreButton.addEventListener("click", function () {
+        searchByGenre(genre);
+      });
+      buttonContainer.appendChild(genreButton);
+    });
+  });
+  function searchByGenre(selectedGenre) {
+    fetch(
+      "https://raw.githubusercontent.com/omjamnekar/animejson1/master/animebigFinal_animedataset.json"
+    )
+      .then((response) => response.json())
+      .then((data) => {
+        const filteredResults = data.filter((item) => {
+          const lowerCaseGenre = selectedGenre.toLowerCase();
+          return (
+            (item.Name &&
+              typeof item.Name === "string" &&
+              item.Name.toLowerCase().includes(lowerCaseGenre)) ||
+            (item.Genres &&
+              typeof item.Genres === "string" &&
+              item.Genres.toLowerCase().includes(lowerCaseGenre)) ||
+            (item.Genres &&
+              typeof item.Genres === "string" &&
+              item["English name"] &&
+              typeof item["English name"] === "string" &&
+              item["English name"].toLowerCase().includes(lowerCaseGenre)) ||
+            (item.Genres &&
+              typeof item.Genres === "string" &&
+              item["Other name"] &&
+              typeof item["Other name"] === "string" &&
+              item["Other name"].toLowerCase().includes(lowerCaseGenre))
+          );
+        });
+
+        const firstTenResults = filteredResults.slice(0, 10);
+
+        // Extract image URLs from the first 10 records
+        const imageUrls = firstTenResults.map((item) => item["Image URL"]);
+
+        // Preload images
+        const preloadedImages = [];
+        for (const imageUrl of imageUrls) {
+          const img = new Image();
+          img.src = imageUrl;
+          preloadedImages.push(img);
+        }
+        // Display the filtered results
+        displayResults(filteredResults);
+      })
+      .catch((error) => console.log("Error fetching JSON data:", error));
+  }
+
+  function displayResults(results) {
+    const resultsContainer = document.getElementById("results");
+    resultsContainer.innerHTML = "";
+
+    if (results.length === 0) {
+      resultsContainer.innerHTML =
+        "<p class='no-search-found'>No results found.</p>";
+      return;
+    }
+
+    const resultList = document.createElement("ul");
+    resultList.classList.add("frfr"); // Add class to the <ul> element
+    results.forEach((item) => {
+      const listItem = document.createElement("li");
+      listItem.classList.add("card-let-e"); // Add class to each <li> element
+
+      const listItemContent = `
+      <div class="card-anim" onmouseover="increaseSize(this)" onmouseout="resetSize(this)">
+       
+          ${
+            item["Image URL"]
+              ? `<img class="img-round" src="${item["Image URL"]}" alt="${item.Name} Image">`
+              : ""
+          }
+        
+        <div class="text-card-in-box">
+            <aside class="info-side">
+                
+                <p>cc:<span>${item.Score}</span></p>
+                <p class="episode-no"><span>${item.Episodes}EPS<span></p>
+            </aside>
+            <div class="name-if-anime-cards">
+                <h4>${item["English name"]}</h4>
+               <p> ${item.Type}<span>jul 14,2023</p>
+            </div>
+        </div>
+        <aside class="main-aside">
+          <h4>${item.Name}</h4>
+          <p><strong>Other Name:</strong> ${item["Other name"]}</p>
+          <p><strong>Genres:</strong> ${item.Genres}</p>
+          <p><strong>Aired:</strong> ${item.Aired}</p>
+          <p><strong>Premiered:</strong> ${item.Premiered}</p>
+          <p><strong>Status:</strong> ${item.Status}</p>
+          <p><strong>Producers:</strong> ${item.Producers}</p>
+          <p><strong>Studios:</strong> ${item.Studios}</p>
+          <p><strong>Duration:</strong> ${item.Duration}</p>
+          <p><strong>Members:</strong> ${item.Members}</p>
+          <p><strong>Scored By:</strong> ${item["Scored By"]}</p>
+          <p><strong>Rating:</strong> ${item.Rating}</p>
+        </aside>
+       
+      </div>
+      <hr>
+    `;
+
+      listItem.innerHTML = listItemContent;
+      resultList.appendChild(listItem);
+    });
+
+    resultsContainer.appendChild(resultList);
+  }
+  function increaseSize(element) {
+    element.classList.add("active");
+    // re.classList.remove("active");
+  }
+
+  function resetSize(element) {
+    element.classList.remove("active");
+    // re.classList.add("active");
+  }
+
+  function increaseSize1(element) {
+    element.classList.add("active");
+  }
+
+  function resetSize1(element) {
+    element.classList.remove("active");
+  }
+
+  function resetSizesearch(element) {
+    element.classList.remove(".expanded");
+  }
+
+  window.addEventListener("DOMContentLoaded", function () {
+    const urlParams = new URLSearchParams(window.location.search);
+    const selectedGenre = urlParams.get("genre");
+
+    if (selectedGenre) {
+      // Display the selected genre name in the header
+      const genreHeader = document.getElementById("genre-header");
+      genreHeader.textContent = `Genre: ${decodeURIComponent(selectedGenre)}`;
+
+      // Fetch and display records based on the selected genre
+      searchByGenre(selectedGenre);
+    }
+  });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const imageUrls = [
+      "../img/backzoro.png",
+      "../img/demonslayer.webp",
+      "../img/jjk.webp",
+      "../img/chainsaw.webp",
+      "../img/free.webp",
+      "../img/re-zero-season.png",
+      "../img/tokyog.jpg",
+      "../img/TONIKAWA.jpg",
+
+      // Add more image URLs
+    ];
+
+    // Preload images
+    const preloadedImages = [];
+    for (const imageUrl of imageUrls) {
+      const img = new Image();
+      img.src = imageUrl;
+      preloadedImages.push(img);
+    }
+
+    const imageElement = document.getElementById("slideshow-image");
+    imageElement.style.transition = "opacity 0.5s"; // Apply a smooth fade transition
+
+    let currentImageIndex = 0;
+
+    function showImage(index) {
+      if (index < 0 || index >= imageUrls.length) {
+        return; // Bounds checking to ensure valid index
+      }
+
+      imageElement.style.opacity = 0; // Start with opacity 0
+      setTimeout(() => {
+        imageElement.src = imageUrls[index];
+        imageElement.style.opacity = 1; // Fade in the new image
+        currentImageIndex = index;
+      }, 500); // This delay should match the transition duration
+    }
+
+    function startSlideshow() {
+      // Load the first image immediately
+      showImage(currentImageIndex);
+
+      // Start the interval for the slideshow after loading the first image
+      setInterval(() => {
+        currentImageIndex = (currentImageIndex + 1) % imageUrls.length;
+        showImage(currentImageIndex);
+      }, 8000); // Change the interval time as desired (in milliseconds)
+    }
+
+    // Call startSlideshow to begin the automatic slideshow
+    startSlideshow();
+  });
+
+  function displayDetails() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const index = parseInt(urlParams.get("index"));
+
+    const selectedRecord = filteredResults[index];
+    // Rest of your displayDetails function code
+  }
+</script>

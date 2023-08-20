@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>account</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;0,800;1,800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/account.css" />
+    <link rel="stylesheet" href="../css/search.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="icon" type="image/x-icon" href="../img/icon-logo.png" />
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts@3.27.2/dist/apexcharts.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+  </head>
+  <body>
+    <header class="header-1 ert">
+      <div class="header-section">
+        <div class="logo-container">
+          <div class="logo">
+            <img src="../img/logo/1.png" alt="weebhub-anime-logo" />
+          </div>
+          <h4><a href="index.html">Home</a></h4>
+          <h4>Anime</h4>
+          <h4>More</h4>
+          <i class="bx bx-menu"></i>
+          <div class="active-phase">
+            <aside class="avote-sec">
+              <p>
+                <a href="account.html"
+                  ><i class="bx bx-game"></i><span>account Manege</span></a
+                >
+              </p>
+              <p>
+                <a href="history.html"
+                  ><i class="bx bx-history"></i><span>History</span></a
+                >
+              </p>
+              <p>
+                <a href=""
+                  ><i class="bx bxs-bar-chart-alt-2"></i><span> Binges</span></a
+                >
+              </p>
+              <p>
+                <a href=""><i class="bx bx-pencil"></i><span>about</span></a>
+              </p>
+            </aside>
+          </div>
+        </div>
+
+        <div class="icons-search">
+          <div class="search-box expandable-input">
+            <div class="row">
+              <input
+                type="text"
+                id="searchInput"
+                class="check"
+                placeholder="Search anime"
+              />
+              <button class="bx-button"><i class="bx bx-search"></i></button>
+            </div>
+            <div id="results" class="result-box"></div>
+            <div class="btn-search-con-s">
+              <aside class="aside-div">
+                <button
+                  id="showMore"
+                  class="more-option-search"
+                  style="display: none"
+                >
+                  see more
+                </button>
+                <button
+                  id="seePrevious"
+                  class="more-option-search"
+                  style="display: none"
+                >
+                  Show Previous
+                </button>
+              </aside>
+            </div>
+          </div>
+          <a href="account.html"
+            ><div class="section-header-acc-icon" href="account.html">
+              <div class="account-small-icon">
+                <h2 class="user-name">Om jamnekar</h2>
+                <p class="user-id">omjamnekar877@gmail.com</p>
+              </div>
+              <img src="https://images5.alphacoders.com/121/1217703.png" /></div
+          ></a>
+        </div>
+      </div>
+    </header>
+
+    <article>
+      <section class="hero-section-acc">
+        <div class="image-back"><img src="../img/back-acc.png" /></div>
+        <main class="main-accout-section">
+          <div class="account-detail">
+            <aside class="account-detail-1">
+              <img
+                src="https://images5.alphacoders.com/121/1217703.png"
+                alt="eren"
+              />
+              <a class="icon-imag-changer" href=""
+                ><i class="bx bx-pencil"></i
+              ></a>
+            </aside>
+            <div class="text-acc-detail">
+              <div class="text-main-acc">
+                <h2>Om jamnekar</h2>
+                <p>weebhub member,otaku, binges boy,</p>
+                <aside>
+                  <h3>email:</h3>
+                  <div>
+                    <p>omjamnekar877@gmail.com</p>
+                    <i class="bx bx-pencil"></i>
+                  </div>
+                </aside>
+                <aside>
+                  <h3>phone number:</h3>
+
+                  <div>
+                    <p>9930441962</p>
+                    <i class="bx bx-pencil"></i>
+                  </div>
+                </aside>
+                <aside>
+                  <h3>Password:</h3>
+                  <p>.........</p>
+                </aside>
+                <aside>
+                  <h3>Edit Profile</h3>
+                  <button class="setting-acc">Edit</button>
+                </aside>
+
+                <aside>
+                  <h2>Settings Customization</h2>
+                  <buttom class="setting-acc">Setting</buttom>
+                  <p>
+                    Allow users to customize their account page layout, color
+                    theme, and other visual preferences.
+                  </p>
+                </aside>
+              </div>
+
+              <div class="min-detail"></div>
+            </div>
+          </div>
+          <div class="line"></div>
+          <div class="other-detail-acc">
+            <div class="chart">
+              <h2>HEADING FOR CHART</h2>
+            </div>
+            <aside class="one-set">
+              <aside>
+                <div>
+                  <h2>Security Settings:</h2>
+                  <input type="checkbox" />
+                </div>
+                <p>
+                  Password change/reset functionality. Two-factor authentication
+                  options for added security.
+                </p>
+              </aside>
+              <aside>
+                <div>
+                  <h2>Account Settings:</h2>
+                  <input type="checkbox" />
+                </div>
+                <p>
+                  Notification preferences: Allow users to choose how they
+                  receive notifications (email, in-app, SMS).
+                </p>
+                <p>
+                  Privacy settings: Provide options to control who can see their
+                  profile and content.
+                </p>
+                <p>Language and localization preferences.</p>
+              </aside>
+              <aside>
+                <div>
+                  <h2>Saved Items/Favorites:</h2>
+                  <input type="checkbox" />
+                </div>
+                <p>
+                  Provide a section where users can view and manage their saved
+                  items, favorites, or bookmarks.
+                </p>
+              </aside>
+              <aside>
+                <div>
+                  <h2>Activity Log:</h2>
+                </div>
+                <p>
+                  Display a log of recent activities related to the user's
+                  account, such as login attempts and password changes.
+                </p>
+              </aside>
+              <aside>
+                <div>
+                  <h2>Connected Accounts:</h2>
+                </div>
+                <p>
+                  If your platform integrates with other services (e.g., social
+                  media), allow users to manage linked accounts.
+                </p>
+                <div class="logo-acc-first">
+                  <i class="bx bxl-google"></i>
+                  <i class="bx bxl-facebook-square"></i>
+                  <i class="bx bxl-twitter"></i>
+                  <i class="bx bxl-instagram-alt"></i>
+                  <i class="bx bxl-discord-alt"></i>
+                </div>
+              </aside>
+              <aside>
+                <div>
+                  <h2>Help and Support:</h2>
+                </div>
+                <p>
+                  Provide links to FAQs, contact customer support, and access
+                  help resources.
+                </p>
+                <button>see</button>
+              </aside>
+              <aside>
+                <div>
+                  <h2>Feedback and Surveys:</h2>
+                </div>
+                <p>
+                  Allow users to provide feedback about their experience on the
+                  platform.
+                </p>
+                <button>see</button>
+              </aside>
+              <aside>
+                <div>
+                  <h2>Data and Privacy:</h2>
+                </div>
+                <p>
+                  Clearly indicate how users can log out of their account when
+                  they're done.
+                </p>
+                <button>see</button>
+              </aside>
+              <aside>
+                <div>
+                  <h2><a href="" class="login-acc0">Logout/Sign Out:</a></h2>
+                </div>
+              </aside>
+            </aside>
+          </div>
+          <section class="last-s">
+            <div class="color-container">
+              <h2>Your Recent Watch!</h2>
+              <div id="chart"></div>
+              <div class="ber-text">
+                <h1>Chart Illustrates Series Completion</h1>
+                <p>
+                  Effortlessly track and understand the completion status of
+                  multiple series with our intuitive pie chart representation.
+                </p>
+              </div>
+            </div>
+          </section>
+        </main>
+      </section>
+    </article>
+    <footer>
+      <img class="img-back-footer" src="../img/footer-back.webp" alt="" />
+      <div class="info-of-business">
+        <aside>
+          <div class="first-card-footer">
+            <img src="../img/logo/1.png" alt="" />
+            <h2 class="head-bus">WeeHud-vid</h2>
+            <p>Where Streaming Meets Otaku Dreams</p>
+          </div>
+          <div class="sub-footer">
+            <p>
+              <span>Terms of service</span><span> DMCA </span>
+              <span>Contact</span>
+            </p>
+            <p>
+              WeebHub-vid does not store any files on our server, we only linked
+              to the media which is hosted on 3rd party services.
+            </p>
+          </div>
+        </aside>
+      </div>
+      <aside class="class-logo"><p>© Weehub_vid.to</p></aside>
+    </footer>
+  </body>
+  <aside>
+    <script src="../js/script.js" type="module"></script>
+    <script src="../js/scroll.js"></script>
+    <script src="../js/search.js"></script>
+    <script src="../js/botton.js"></script>
+    <script src="../js/chart.js"></script>
+    <script>
+      function increaseSize(element) {
+        element.classList.add("active");
+        // re.classList.remove("active");
+      }
+
+      function resetSize(element) {
+        element.classList.remove("active");
+        // re.classList.add("active");
+      }
+
+      function increaseSize1(element) {
+        element.classList.add("active");
+      }
+
+      function resetSize1(element) {
+        element.classList.remove("active");
+      }
+
+      function resetSizesearch(element) {
+        element.classList.remove(".expanded");
+      }
+
+      window.addEventListener("scroll", function () {
+        // Get the scroll position
+        const scrollPosition = window.scrollY;
+
+        // Define the position at which you want to add the "active" class
+        const targetPosition = 600;
+
+        // Get the element with the class "rep"
+        const receivesq = this.document.querySelector(".ert");
+
+        // Add or remove the "active" class based on the scroll position
+        if (scrollPosition > targetPosition) {
+          receivesq.classList.add("active");
+        } else {
+          receivesq.classList.remove("active");
+        }
+      });
+    </script>
+  </aside>
+</html>

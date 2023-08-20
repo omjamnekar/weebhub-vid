@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weebhub-vid</title>
     <link rel="stylesheet" href="../css/style.css" />
-
+    <link rel="stylesheet" href="../css/scroll.css">
+    <link rel="icon" type="image/y-icon" href="../img/icon-logo.png" />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;0,800;1,800&display=swap"
       rel="stylesheet"
@@ -16,20 +17,29 @@
     />
     <link rel="stylesheet" href="../css/search.css">
   </head>
-  <header>
+  <header class="header-1">
     <div class="header-section">
       <div class="logo-container">
         <div class="logo">
           <img src="../img/logo/1.png" alt="weebhub-anime-logo" />
         </div>
         <h4>home</h4>
-        <h4>anime</h4>
-        <h4>more</h4>
+        <h4><a href="anime.html">Anime</a></h4>
+        <h4>More</h4>
         <i class="bx bx-menu"></i>
-      </div>
+        <div class="active-phase">
+ 
+          <aside class="avote-sec">
+            <p><a href="account.html"><i class='bx bx-game' ></i><span>account Manage</span></a></p>
+            <p><a href="history.html"><i class='bx bx-history' ></i><span>History</span></a></p>
+            <p><a href=""><i class='bx bxs-bar-chart-alt-2'></i><span> Binges</span></a></p>
+            <p><a href=""><i class='bx bx-pencil'></i><span>about</span></a></p>
+          </aside>
+        </div>
+        </div>
 
       <div class="icons-search">
-        <div class="search-box expandable-input">
+        <div class="search-box expandable-input" >
           <div class="row">
             <input
               type="text"
@@ -61,13 +71,14 @@
         </div>
         </div>
 
-        <div class="section-header-acc-icon" href="account.html">
+  
+  <a href="account.html"><div class="section-header-acc-icon" href="account.html">
           <div class="account-small-icon">
             <h2 class="user-name">Om jamnekar</h2>
             <p class="user-id">omjamnekar877@gmail.com</p>
           </div>
           <img src="https://images5.alphacoders.com/121/1217703.png">
-        </div>
+        </div></a>
       </div>
 
 
@@ -79,7 +90,7 @@
     <section class="hero-section">
       <div class="middle-container">
         <div class="main-img-container">
-          <img class="photo-main" alt="" />
+          <img class="photo-main" id="slideshow-image1" alt="" />
         </div>
         <div class="overlap-container">
          
@@ -194,7 +205,7 @@
         <h2>Trending Animes</h2>
         <div class="cards-list">
           <aside
-            class="cards-former re active"
+            class="cards-former active"
             onmouseover="increaseSize(this)"
             onmouseout="resetSize(this)"
           >
@@ -363,7 +374,30 @@
 
                   </aside>
                   <aside class="most-list-con-1">
-                    
+                    <div class="most-view-card-w"></div>
+                    <div class="most-view-card-w"></div>
+                    <div class="most-view-card-w"></div>
+                    <div class="most-view-card-w"></div>
+                    <div class="most-view-card-w"></div>
+                    <div class="most-view-card-w"></div>
+                    <div class="most-view-card-w"></div>
+                    <div class="most-view-card-w"></div>
+                    <div class="most-view-card-w"></div>
+
+
+                  </aside>
+                  <aside class="most-list-con-1">
+                    <div class="most-view-card-y"></div>
+                    <div class="most-view-card-y"></div>
+                    <div class="most-view-card-y"></div>
+                    <div class="most-view-card-y"></div>
+                    <div class="most-view-card-y"></div>
+                    <div class="most-view-card-y"></div>
+                    <div class="most-view-card-y"></div>
+                    <div class="most-view-card-y"></div>
+                    <div class="most-view-card-y"></div>
+
+
                   </aside>
                 </section>
               </figure>
@@ -373,22 +407,105 @@
       </div>
     </section>
 
+    <div class="heading-rencent">
+      <h1>
+        Your Recent Watch! 
+      </h1>
+    </div>
     <section class="fourth-container">
       <div class="class-main">
-
+        <div class="wer"></div>
         <div class="img-back-zoro" >
           <img src="../img/backzoro.png" id="slideshow-image" alt="">
+          
       </div>
       <div class="text-con">
+        
+        <div class="card-list-e">
+          <div class="card-let-dy-de"></div>
+          <div class="card-let-dy-de"></div>
+          <div class="card-let-dy-de"></div>
+          <div class="card-let-dy-de"></div>
+          <div class="card-let-dy-de"></div>
+          <div class="card-let-dy-de"></div>
+          <div class="card-let-dy-de"></div>
+          <div class="card-let-dy-de"></div>
+          <div class="card-let-dy-de"></div>
+          <div class="card-let-dy-de"></div>
+
+        </div>
+        
+      </div>
+      <div class="icon-arrow-div">
+
+        <i class='bx bx-chevron-left'id="leftArrow2" ></i>
+        <i class='bx bx-chevron-right' id="rightArrow2"></i>
       </div>
     </div>
     </section>
 
-    <section>
+    <section class="last-container">
+      <article class="container-main-last">
+
      
+      <div class="section-1-card">
+        <div class="list-dy-com"></div>
+     
+      </div>
+      <aside class="other-info-anime">
+        <img src="../img/naruto.jpeg" alt="">
+        <div class="otherAnime-see">
+          <h2>
+            see More then thousands of anime with just one click
+          </h2>
+          <p><a href="">see more -></a></p>
+        </div>
+      </aside>
+    </article>
     </section>
+    <section class="sub-last-container">
+    <div class="sin-con">
+      <h2>Welcome to Your Anime Universe</h2>
+      <p>Explore a World of Anime Adventures and Stories</p>
+      <p>Discover an incredible variety of anime genres and stories on our platform. From action-packed adventures that will keep you on the edge of your seat, to heartwarming romances that touch the soul, we offer a diverse range of anime to cater to every taste. </p>
+    </div>
+    <div class="redw">
+      <h2>Dive into fantasy worlds filled with magic and mythical creatures, explore futuristic landscapes </h2>
+      <p>Immerse yourself in the captivating narratives and visually stunning animation that make anime a beloved and timeless art form.</p>
+    </div>
+    </section>
+
+   
+    <footer>
+      <img class="img-back-footer"src="../img/footer-back.webp" alt="">
+      <div class="info-of-business">
+      <aside>
+
+      
+        <div class="first-card-footer">
+          <img src="../img/logo/1.png" alt="">
+          <h2 class="head-bus">
+            WeeHud-vid
+          </h2>
+          <p>Where Streaming Meets Otaku Dreams</p>
+        </div>
+        <div class="sub-footer">
+          <p> <span>Terms of service</span><span> DMCA </span> <span>Contact</span></p>
+          <p>WeebHub-vid does not store any files on our server, we only linked to the media which is hosted on 3rd party services.
+          </p>
+         
+        </div>
+      </aside>
+      </div>
+      <aside class="class-logo"><p>© Weehub_vid.to</p></aside>
+    </footer>
   </body>
+  <script src="../js/chart.js"></script>
   <script src="../js/script.js" type="module"></script>
+
+  <script src="../js/scroll.js"></script>
+  <script src="../js/search.js"></script>
+  <script src="../js/botton.js"></script>
   <script>
     function increaseSize(element) {
   element.classList.add("active");
@@ -408,9 +525,9 @@ function resetSize1(element) {
   element.classList.remove("active");
 }
 
-function resetSizesearch(element){
+function resetSizesearch(element) {
   element.classList.remove(".expanded");
 }
+
   </script>
-  <script src="../js/search.js"></script>
 </html>
